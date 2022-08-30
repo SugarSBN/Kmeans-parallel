@@ -1,0 +1,35 @@
+cabal-version:      2.4
+name:               Kmeans-parallel
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             SugarSBN
+maintainer:         15952265117@126.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+executable Kmeans-parallel
+    main-is:          Main.hs
+    ghc-options:      -threaded -fno-warn-unused-do-bind -rtsopts -eventlog
+    -- Modules included in this executable, other than Main.
+    other-modules: KMeansCore, GenSample, Kmeans
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.14.3.0, deepseq >= 1.4.4.0, binary >= 0.8.8.0, bytestring >= 0.10.12.0, array >= 0.5.4.0, 
+                      random >= 1.2.1.1, normaldistribution >= 1.1.0.3, parallel >= 3.2.2.0, time >= 1.9.3, monad-par, vector >= 0.13.0.0
+    hs-source-dirs:   app
+    default-language: Haskell2010
